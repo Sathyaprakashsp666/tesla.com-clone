@@ -56,6 +56,12 @@ const Login = () => {
             onChange={handlePassword}
           />
           <button className="login__submitBtn">SIGN IN</button>
+          <div className="login__divider">
+              <hr/><span>OR</span><hr/>
+          </div>
+          <Link to='/signup'>
+              <button className='login__craeteBtn'>CREATE ACCCOUNT</button>
+          </Link>
         </form>
       </div>
     </div>
