@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import LanguageOutlinedIcon from "@material-ui/icons/LanguageOutlined";
-import "./Login.css"
+import "./Login.css";
+import { auth } from "../firebase/firebase";
+import { useDispatch } from "react-redux";
+import { login } from "../features/userSlice";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -16,13 +21,24 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const payload = {
-      email,
-      password,
-    };
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        dispatch(
+          login({
+            email: userAuth.user.email,
+            uid: userAuth.user.uid,
+            displayName: userAuth.user.displayName,
+          })
+        );
+        // history.push("/tesla");
+      })
+      .catch((error) => alert(error.message));
+
     setEmail("");
     setPassword("");
-    console.log(payload);
+    // console.log(payload);
   };
 
   return (
@@ -57,10 +73,12 @@ const Login = () => {
           />
           <button className="login__submitBtn">SIGN IN</button>
           <div className="login__divider">
-              <hr/><span>OR</span><hr/>
+            <hr />
+            <span>OR</span>
+            <hr />
           </div>
-          <Link to='/signup'>
-              <button className='login__craeteBtn'>CREATE ACCCOUNT</button>
+          <Link to="/signup">
+            <button className="login__craeteBtn">CREATE ACCCOUNT</button>
           </Link>
         </form>
       </div>
