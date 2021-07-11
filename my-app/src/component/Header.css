@@ -13,7 +13,7 @@
 .header__logoImg {
   object-fit: contain;
   width: 100px;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .header__links {
@@ -31,7 +31,7 @@
 .header__right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   /* justify-content: space-between; */
   margin-right: 30px;
 }
@@ -45,6 +45,6 @@
   position: relative;
 }
 
-.header__hideden{
-    visibility: hidden;
+.header__hideden {
+  visibility: hidden;
 }

@@ -1,0 +1,76 @@
+.homepage {
+  background: url("https://tesla.com/ns_videos/model-3-social.jpg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+}
+
+.homepage__info {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+}
+.homepage__infoText {
+  text-align: center;
+  flex: 1;
+}
+
+.homepage__infoText > h1 {
+  color: #393c41;
+  font-weight: 500;
+  font-size: 38px;
+}
+.homepage__infoText > h4 {
+  color: #5c5e62;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.homepage__infoText a {
+  color: #5c5e62;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.homepage__infoText a:hover {
+  border-bottom-width: 2px;
+  color: black;
+}
+
+.homepage__carBtn {
+  margin-top: 375px;
+  display: flex;
+  gap: 20px;
+}
+
+.homepage__carBtn button {
+  border: none;
+  width: 260px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+.homepage__buttonOne {
+  background-color: #393c41;
+  color: #ffffff;
+  opacity: 0.9;
+}
+.homepage__buttonTwo {
+  background-color: #ffffff;
+  color: black;
+  opacity: 0.8;
+}

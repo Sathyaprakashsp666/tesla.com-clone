@@ -1,0 +1,33 @@
+.menu {
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 70px;
+  padding-right: 2px;
+  background-color: #ffffff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  min-width: 290px;
+}
+
+.menu__item {
+  border-bottom: 1px solid #d0d1d2;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu__item h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding-bottom: 15px;
+  font-size: 15px;
+  padding-left: 10px;
+  cursor: pointer;
+}

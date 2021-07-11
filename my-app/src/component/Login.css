@@ -1,0 +1,23 @@
+.login{
+    padding: 25px;
+    padding-top: 15px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.login__header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    /* background-color: black; */
+}
+
+.login__logo > a > img {
+    object-fit: contain;
+    width: 100px;
+}
