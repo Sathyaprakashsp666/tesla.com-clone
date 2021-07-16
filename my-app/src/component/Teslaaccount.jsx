@@ -43,7 +43,7 @@ const Teslaaccount = ({ setIsMenuOpen, menuOpen }) => {
           <Link to="/teslaaccount">Solar Panel</Link>
           <Link to="/teslaaccount">Shop</Link>
           <Link to="/teslaaccount">Account</Link>
-          <Link onClick={logout}>Logout</Link>
+          <Link onClick={logoutApp}>Logout</Link>
           <div
             className="teslaAccount__menu"
             onClick={() => setIsMenuOpen(!menuOpen)}
