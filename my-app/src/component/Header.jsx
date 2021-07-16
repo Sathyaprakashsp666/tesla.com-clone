@@ -26,7 +26,7 @@ const Header = (props) => {
       </div>
       <div className="header__right" >
         <Link to="" className={menuOpen && 'header__hideden'}>Shop</Link>
-        <Link to="" className={menuOpen && 'header__hideden'}>Tesla Account</Link>
+        <Link to="" className={menuOpen && 'header__hideden'}>Account</Link>
         <div className="header__menu" onClick={() => setIsMenuOpen(!menuOpen)}>
           <Link to="">{menuOpen ?  <CloseIcon /> : "Menu"}</Link>
         </div>
