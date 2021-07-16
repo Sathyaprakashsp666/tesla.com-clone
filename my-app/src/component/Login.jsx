@@ -32,7 +32,7 @@ const Login = () => {
             displayName: userAuth.user.displayName,
           })
         );
-        // history.push("/tesla");
+        history.push("/teslaaccount");
       })
       .catch((error) => alert(error.message));
 

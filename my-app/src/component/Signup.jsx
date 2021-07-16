@@ -45,10 +45,10 @@ const Signup = () => {
               login({
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
-                displayName:firstname,
+                displayName: firstname,
               })
             );
-            // history.push("/tesla");
+            history.push("/teslaaccount");
           });
       })
       .catch((error) => alert(error.message));

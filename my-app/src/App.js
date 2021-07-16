@@ -29,20 +29,30 @@ function App() {
           </Route>
 
           <Route exact path="/login">
-            {/* {user ? <Redirect to="/tesla" /> : <Login />} */}
-            <Login/>
+            {user ? <Redirect to="/tesla" /> : <Login />}
           </Route>
 
-          <Route exact to="/signup">
+          <Route exact path="/signup">
             <Signup />
           </Route>
 
-          <Route exact to="/tesla">
-            {/* {user ? <Teslaaccount /> : <Redirect to="/login" />} */}
-            <Teslaaccount/>
+          <Route exact path="/teslaaccount">
+            {user ? (
+              <Redirect to="/login" />
+            ) : (
+              <>
+                <Teslaaccount
+                  menuOpen={menuOpen}
+                  setIsMenuOpen={setIsMenuOpen}
+                />
+                {menuOpen && <Menu />}
+              </>
+            )}
           </Route>
 
-          <Route exact to="/try">hi</Route>
+          <Route exact to="/try">
+            hi
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>
