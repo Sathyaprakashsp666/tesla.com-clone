@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./component/Header";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
@@ -6,14 +6,37 @@ import "./App.css";
 import Menu from "./component/Menu";
 import HomePage from "./component/HomePage";
 import Login from "./component/Login";
-import { useSelector } from "react-redux";
-import { selectUser } from "./features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { login, logout, selectUser } from "./features/userSlice";
 import Signup from "./component/Signup";
 import Teslaaccount from "./component/Teslaaccount";
+import { auth } from "./firebase/firebase";
 
 function App() {
   const [menuOpen, setIsMenuOpen] = useState(false);
+
+  const dispatch = useDispatch();
+
   // console.log(menuOpen)
+
+  useEffect(() => {
+    auth.onAuthStateChanged((userAuth) => {
+      //firesbase persistance
+      if (userAuth) {
+        //user is signed in
+        dispatch(
+          login({
+            email: userAuth.email,
+            uid: userAuth.uid,
+            displayName: userAuth.displayName,
+          })
+        );
+      } else {
+        //user is signed out
+        dispatch(logout());
+      }
+    });
+  }, [dispatch]);
 
   const user = useSelector(selectUser); //taking user data from redux state
   console.log(user);
@@ -29,7 +52,7 @@ function App() {
           </Route>
 
           <Route exact path="/login">
-            {user ? <Redirect to="/tesla" /> : <Login />}
+            {user ? <Redirect to="/teslaaccount" /> : <Login />}
           </Route>
 
           <Route exact path="/signup">
@@ -37,7 +60,7 @@ function App() {
           </Route>
 
           <Route exact path="/teslaaccount">
-            {user ? (
+            {!user ? (
               <Redirect to="/login" />
             ) : (
               <>
@@ -48,10 +71,6 @@ function App() {
                 {menuOpen && <Menu />}
               </>
             )}
-          </Route>
-
-          <Route exact to="/try">
-            hi
           </Route>
         </Switch>
       </div>

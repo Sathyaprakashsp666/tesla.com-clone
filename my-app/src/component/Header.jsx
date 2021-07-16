@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import CloseIcon from "@material-ui/icons/Close";
 
 const Header = (props) => {
   const { menuOpen, setIsMenuOpen } = props;
@@ -27,7 +28,7 @@ const Header = (props) => {
         <Link to="" className={menuOpen && 'header__hideden'}>Shop</Link>
         <Link to="" className={menuOpen && 'header__hideden'}>Tesla Account</Link>
         <div className="header__menu" onClick={() => setIsMenuOpen(!menuOpen)}>
-          <Link to="">{menuOpen ? "X" : "Menu"}</Link>
+          <Link to="">{menuOpen ?  <CloseIcon /> : "Menu"}</Link>
         </div>
       </div>
     </div>

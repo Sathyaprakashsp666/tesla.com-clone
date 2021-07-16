@@ -1,0 +1,40 @@
+.car {
+  display: grid;
+  place-items: center;
+  border-top: 1px solid #d0d1d2;
+}
+.car__img > img {
+  object-fit: contain;
+  width: 1100px;
+}
+.car__model {
+  text-transform: capitalize;
+  font-weight: xx-large;
+  margin-top: -180px;
+}
+
+.car__actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.car__actions > button {
+  width: 230px;
+  margin-bottom: 30px;
+}
+
+.car__info {
+  text-align: center;
+  max-width: 350px;
+  font-size: smaller;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #393c41;
+}
+
+.car__info > span {
+  color: #3e6be2;
+  cursor: pointer;
+}
