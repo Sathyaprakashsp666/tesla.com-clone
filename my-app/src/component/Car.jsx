@@ -10,7 +10,7 @@ const Car = ({ imgSrc, model, testDrive }) => {
       <h2 className="car__model">{model}</h2>
       <div className="car__actions">
         <button>ORDER</button>
-        {testDrive && <button></button>}
+        {testDrive && <button className='car__testdrive'>Test drive</button>}
       </div>
       <div className="car__info">
         <span>Request a Call</span>to speak with a product speacialist, value

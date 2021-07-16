@@ -11,6 +11,7 @@ import { login, logout, selectUser } from "./features/userSlice";
 import Signup from "./component/Signup";
 import Teslaaccount from "./component/Teslaaccount";
 import { auth } from "./firebase/firebase";
+import PageNotFound from "./component/PageNotFound";
 
 function App() {
   const [menuOpen, setIsMenuOpen] = useState(false);
@@ -71,6 +72,9 @@ function App() {
                 {menuOpen && <Menu />}
               </>
             )}
+          </Route>
+          <Route>
+            <PageNotFound />
           </Route>
         </Switch>
       </div>

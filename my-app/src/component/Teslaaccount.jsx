@@ -57,9 +57,9 @@ const Teslaaccount = ({ setIsMenuOpen, menuOpen }) => {
           <h4>{user?.displayName + "'s"}Tesla</h4>
         </div>
         <div className="teslaAccount__infoRight">
-          <Link>Home</Link>
-          <Link>Account</Link>
-          <Link>History</Link>
+          <Link to="/">Home</Link>
+          <Link to="signup">Account</Link>
+          <Link to="">History</Link>
           <Link onClick={logoutApp}>Sign out</Link>
         </div>
       </div>
@@ -67,6 +67,7 @@ const Teslaaccount = ({ setIsMenuOpen, menuOpen }) => {
         <Car
           imgSrc="https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-models@2x.jpg?20170815"
           model="model s"
+          testDrive
         />
         <Car
           imgSrc="https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-modelx@2x.jpg?20170815"

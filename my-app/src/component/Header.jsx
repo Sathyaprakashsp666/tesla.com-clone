@@ -17,18 +17,36 @@ const Header = (props) => {
         </Link>
       </div>
       <div className="header__links">
-        <Link to="/">Model S</Link>
-        <Link to="/">Model 3</Link>
-        <Link to="/">Model x</Link>
-        <Link to="/">Model y</Link>
-        <Link to="/">Solar Roof</Link>
-        <Link to="/">Solar Panel</Link>
+        <button>
+          <Link to="/">Model S</Link>
+        </button>
+        <button>
+          <Link to="/">Model 3</Link>
+        </button>
+        <button>
+          <Link to="/">Model x</Link>
+        </button>
+
+        <button>
+          <Link to="/">Model y</Link>
+        </button>
+        <button>
+          <Link to="/">Solar Roof</Link>
+        </button>
+
+        <button>
+          <Link to="/">Solar Panel</Link>
+        </button>
       </div>
-      <div className="header__right" >
-        <Link to="" className={menuOpen && 'header__hideden'}>Shop</Link>
-        <Link to="" className={menuOpen && 'header__hideden'}>Account</Link>
+      <div className="header__right">
+        <Link to="teslaaccount" className={menuOpen && "header__hideden"}>
+          Shop
+        </Link>
+        <Link to="/signup" className={menuOpen && "header__hideden"}>
+          Account
+        </Link>
         <div className="header__menu" onClick={() => setIsMenuOpen(!menuOpen)}>
-          <Link to="">{menuOpen ?  <CloseIcon /> : "Menu"}</Link>
+          <Link to="">{menuOpen ? <CloseIcon /> : "Menu"}</Link>
         </div>
       </div>
     </div>

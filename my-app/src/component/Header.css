@@ -20,6 +20,21 @@
   display: flex;
   gap: 15px;
 }
+.header__links button {
+  min-width: 50px;
+  min-height: 40px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.header__links button:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 40px;
+  background-color: hsla(0, 0%, 50.2%, 0.225);
+}
+
 .header__links a {
   text-decoration: none;
   color: black;
@@ -35,6 +50,13 @@
   /* justify-content: space-between; */
   margin-right: 30px;
 }
+.header__right a:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 50px;
+  background-color: hsla(0, 0%, 50.2%, 0.125);
+}
+
 .header__right a {
   text-decoration: none;
   color: black;
