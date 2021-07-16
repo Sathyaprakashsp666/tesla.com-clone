@@ -42,8 +42,8 @@ const Teslaaccount = ({ setIsMenuOpen, menuOpen }) => {
           <Link to="/teslaaccount">Solar Roof</Link>
           <Link to="/teslaaccount">Solar Panel</Link>
           <Link to="/teslaaccount">Shop</Link>
-          <Link to="/teslaaccount">Tesla Account</Link>
-          <Link onClick={logout}>Log out</Link>
+          <Link to="/teslaaccount">Account</Link>
+          <Link onClick={logout}>Logout</Link>
           <div
             className="teslaAccount__menu"
             onClick={() => setIsMenuOpen(!menuOpen)}
@@ -54,7 +54,7 @@ const Teslaaccount = ({ setIsMenuOpen, menuOpen }) => {
       </div>
       <div className="teslaAccount__info">
         <div className="teslaAccount__person">
-          <h4>{user?.displayName + "'s"}Tesla</h4>
+          <h4>{user?.displayName + "'s"}&nbsp; Tesla</h4>
         </div>
         <div className="teslaAccount__infoRight">
           <Link to="/">Home</Link>
