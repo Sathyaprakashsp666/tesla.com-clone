@@ -27,6 +27,7 @@ Tesla, Inc. designs, develops, manufactures, sells and lease electric vehicles a
 > ### styled-components ![styled-components](https://img.shields.io/npm/v/styled-components.svg)
 > ### firebase ![firebase](https://img.shields.io/npm/v/firebase.svg)
 > ### firebase-tools ![firebase-tool](https://img.shields.io/npm/v/firebase-tools.svg)
+> > ### redux-toolkit ![redux-tooljit](https://img.shields.io/npm/v/redux-toolkit.svg)
 
 ### Snapshots from the built product
 
