@@ -20,6 +20,9 @@ Tesla, Inc. designs, develops, manufactures, sells and lease electric vehicles a
 
 ## NPM Packages used 
 > ### react ![React](https://img.shields.io/npm/v/react.svg)
+> ### testing-library/jest-dom ![@testing-library/jest-dom](https://img.shields.io/npm/v/@testing-library/jest-dom.svg)
+> ### testing-library/react ![@testing-library/react](https://img.shields.io/npm/v/@testing-library/react.svg)
+> ### @testing-library/user-event ![@testing-library/user-event](https://img.shields.io/npm/v/@testing-library/user-event.svg)
 > ### react-dom ![React-dom](https://img.shields.io/npm/v/react-dom.svg)
 > ### axios ![axios](https://img.shields.io/npm/v/axios.svg)
 > ### react-icons ![react-icons](https://img.shields.io/npm/v/react-icons.svg)
@@ -27,7 +30,7 @@ Tesla, Inc. designs, develops, manufactures, sells and lease electric vehicles a
 > ### styled-components ![styled-components](https://img.shields.io/npm/v/styled-components.svg)
 > ### firebase ![firebase](https://img.shields.io/npm/v/firebase.svg)
 > ### firebase-tools ![firebase-tool](https://img.shields.io/npm/v/firebase-tools.svg)
-> > ### redux-toolkit ![redux-tooljit](https://img.shields.io/npm/v/redux-toolkit.svg)
+> ### redux-toolkit ![redux-toolkit](https://img.shields.io/npm/v/redux-toolkit.svg)
 
 ### Snapshots from the built product
 
