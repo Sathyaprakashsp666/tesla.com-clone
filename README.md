@@ -1,7 +1,7 @@
 
 # Tesla Clone
 
-Tesla, Inc. designs, develops, manufactures, sells and lease electric vehicles and energy generation and storage systems, and offer services related to its sustainable energy products. The Company's segments include automotive, and energy generation and storage.
+Tesla designs, develops, manufactures, sells and lease electric vehicles and energy generation and storage systems, and offer services related to its sustainable energy products. The Company's segments include automotive, and energy generation and storage.
 
 #### Logo: 
 ![](https://www.freepnglogos.com/uploads/tesla-logo-png-33.png)
